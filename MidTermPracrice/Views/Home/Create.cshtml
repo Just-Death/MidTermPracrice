@@ -1,0 +1,23 @@
+﻿@model MidTermPracrice.Models.Interpolate
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Interpolation</h1>
+
+<h3>Create numbers to interpolate</h3>
+
+<form asp-action="create">
+    <div class="form-group">
+        <label for="firstNum">First Number</label>
+        <input class="form-control" id="firstNum" placeholder="Enter first num" asp-for="NumberOne" />
+
+        <label for="secondNum">Second Number</label>
+        <input class="form-control" id="secondNum" placeholder="Enter second num" asp-for="NumberTwo" />
+
+        <label for="desc">Description</label>
+        <input class="form-control" id="desc" placeholder="Enter Description" asp-for="Description" />
+        <span asp-validation-for="Description"></span>
+    </div>
+        <button class="btn btn-primary" type="submit">Add Pair</button>
+</form>
